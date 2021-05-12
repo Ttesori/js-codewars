@@ -2,7 +2,6 @@
 
 const presses = (phrase) => {
   let presses = 0;
-
   phrase.toUpperCase().split('').forEach(char => {
     presses += getKeyValue(char);
   });
@@ -10,10 +9,11 @@ const presses = (phrase) => {
 }
 
 const getKeyValue = (key) => {
-  let keys = ['ABC2', 'DEF3', 'GHI4', 'JKL5', 'MNO6', 'PQRS7', 'TUV8', 'WXYZ9', ' '];
+  let keys = ['1', 'ABC2', 'DEF3', 'GHI4', 'JKL5', 'MNO6', 'PQRS7', 'TUV8', 'WXYZ9', ' 0'];
   let answer = keys.filter(keyGroup => keyGroup.indexOf(key) !== -1);
   return answer[0].indexOf(key) + 1;
 }
-
 console.log(presses("LOL") === 9);
 console.log(presses("HOW R U") === 13);
+console.log(presses("HOW R U") === 13);
+console.log(presses("IS NE1 OUT THERE") === 31);
