@@ -4,8 +4,7 @@
 
 function solve(arr) {
   // the answer is the number of unique elements in each array multiplied together
-  const setArr = arr.map(arr => Array.from(new Set(arr)));
-  return setArr.reduce((count, arr) => count * arr.length, 1);
+  return arr.map(arr => [...new Set(arr)].length).reduce((count, num) => count * num, 1);
 }
 
 console.log(solve([[1, 2], [4], [5, 6]]), 4); // 2 * 1 * 2 => 4
