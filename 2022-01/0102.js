@@ -12,3 +12,11 @@ var repeatIt = function (str, n) {
 function isDivisible(wallLength, pixelSize) {
   return wallLength % pixelSize === 0;
 }
+
+// https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce
+const check = (a, x) => a.includes(x);
+
+// https://www.codewars.com/kata/55c90cad4b0fe31a7200001f
+function buildString(...template) {
+  return `I like ${template.join(', ')}!`;
+}
