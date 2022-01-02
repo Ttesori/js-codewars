@@ -8,3 +8,7 @@ var repeatIt = function (str, n) {
   return typeof str === "string" ? str.repeat(n) : 'Not a string';
 }
 
+// https://www.codewars.com/kata/58630e2ae88af44d2b0000ea
+function isDivisible(wallLength, pixelSize) {
+  return wallLength % pixelSize === 0;
+}
