@@ -33,3 +33,8 @@ function howManydays(month) {
 function caseInsensitivePalindrome(str) {
   return str.toLowerCase() === str.toLowerCase().split('').reverse().join('');
 }
+
+// https://scrimba.com/learn/frontend/solution-array-replace-cvdB2QSN
+function arrayReplace(array, elemToReplace, substitutionElem) {
+  return array.map(num => num === elemToReplace ? substitutionElem : num)
+}
