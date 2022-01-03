@@ -28,3 +28,8 @@ function howManydays(month) {
   }
   return days;
 }
+
+// https://scrimba.com/learn/frontend/solution-case-insensitive-palindrome-cKKDPefP
+function caseInsensitivePalindrome(str) {
+  return str.toLowerCase() === str.toLowerCase().split('').reverse().join('');
+}
