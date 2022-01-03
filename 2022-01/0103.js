@@ -38,3 +38,8 @@ function caseInsensitivePalindrome(str) {
 function arrayReplace(array, elemToReplace, substitutionElem) {
   return array.map(num => num === elemToReplace ? substitutionElem : num)
 }
+
+// https://scrimba.com/learn/frontend/solution-enclose-in-brackets-crGnMWCJ
+function encloseInBrackets(str) {
+  return `(${str})`;
+}
