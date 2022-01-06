@@ -9,3 +9,12 @@ function checkTheBucket(bucket) {
   return bucket.includes('gold');
 }
 
+// https://www.codewars.com/kata/56b0ff16d4aa33e5bb00008e/train/javascript
+function shortenToDate(longDate) {
+  return longDate.split(',')[0];
+}
+
+// https://www.codewars.com/kata/557b5e0bddf29d861400005d/train/javascript
+function converter(mpg) {
+  return Number(((mpg * 1.609344) / 4.54609188).toFixed(2));
+}
