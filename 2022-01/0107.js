@@ -24,3 +24,18 @@ function dontGiveMeFive(start, end) {
   }
   return count;
 }
+
+// https://www.codewars.com/kata/57f609022f4d534f05000024/train/javascript
+function stray(numbers) {
+  const table = {};
+  numbers.forEach((num) => {
+    if (num in table) {
+      table[num]++;
+    } else {
+      table[num] = 1;
+    }
+  });
+  for (const num in table) {
+    if (table[num] === 1) return Number(num);
+  }
+}
