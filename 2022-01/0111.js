@@ -15,3 +15,9 @@ var cubeChecker = function (volume, side) {
   if (volume < side || volume <= 0 || side <= 0) return false;
   return volume === (Math.pow(side, 3));
 };
+
+//https://www.codewars.com/kata/525c1a07bb6dda6944000031/train/javascript
+const websites = []
+for (let i = 0; i < 1000; i++) {
+  websites.push("codewars")
+}
