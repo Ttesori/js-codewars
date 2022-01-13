@@ -8,3 +8,9 @@ function isVow(a) {
 function odds(values) {
   return values.filter(num => num % 2 === 1);
 }
+
+//https://www.codewars.com/kata/55ccdf1512938ce3ac000056/train/javascript
+function isLockNessMonster(s) {
+  const phrases = ['tree fiddy', '3.50', 'three fifty'];
+  return phrases.some(phrase => s.includes(phrase));
+}
