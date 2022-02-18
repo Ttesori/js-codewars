@@ -30,3 +30,21 @@ function integrate(coefficient, exponent) {
   return `${coefficient / (exponent + 1)}x^${exponent + 1}`;
 }
 
+//https://www.codewars.com/kata/5a360620f28b82a711000047/train/javascript 
+function defineSuit(card) {
+  const suits = {
+    '♣': 'clubs',
+    '♠': 'spades',
+    '♦': 'diamonds',
+    '♥': 'hearts'
+  }
+  return suits[card.slice(-1)]
+}
+
+//https://www.codewars.com/kata/572b6b2772a38bc1e700007a/train/javascript
+function uniTotal(string) {
+  return string.split('').reduce((count, char) => count += char.charCodeAt(0), 0);
+}
+
+
+
