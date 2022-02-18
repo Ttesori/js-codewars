@@ -56,5 +56,19 @@ function orderOperations() {
   return (2 + 2) * (2 + 2) * 2
 }
 
+// https://www.codewars.com/kata/5721c189cdd71194c1000b9b/train/javascript
+function grabDoll(dolls) {
+  const bag = [];
+  for (let i = 0; i < dolls.length; i++) {
+    if (bag.length === 3) break;
+    let doll = dolls[i];
+    if (doll === 'Hello Kitty' || doll === 'Barbie doll') {
+      bag.push(doll);
+    } else {
+      continue;
+    }
+  }
+  return bag;
+}
 
 
