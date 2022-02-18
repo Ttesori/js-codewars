@@ -71,4 +71,10 @@ function grabDoll(dolls) {
   return bag;
 }
 
+//https://www.codewars.com/kata/57b58827d2a31c57720012e8/train/javascript
+function fuelPrice(litres, pricePerLitre) {
+  let discount = litres <= 10 ? Math.floor(litres / 2) * .05 : .25;
+  return +(litres * (pricePerLitre - discount)).toFixed(2);
+}
+
 
