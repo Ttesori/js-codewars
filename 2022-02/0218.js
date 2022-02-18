@@ -77,4 +77,20 @@ function fuelPrice(litres, pricePerLitre) {
   return +(litres * (pricePerLitre - discount)).toFixed(2);
 }
 
+//https://www.codewars.com/kata/58dced7b702b805b200000be/train/javascript
+function distanceBetweenPoints(a, b) {
+  return Math.sqrt((b.x - a.x) ** 2 + (b.y - a.y) ** 2);
+}
+
+//https://www.codewars.com/kata/572b77262bedd351e9000076/train/javascript
+function first(arr, n = 1) {
+  return arr.slice(0, n)
+}
+
+//https://www.codewars.com/kata/596fba44963025c878000039/train/javascript
+function contamination(text, char) {
+  if (text.length === 0 || char.length === 0) return "";
+  return char.repeat(text.length);
+}
+
 
