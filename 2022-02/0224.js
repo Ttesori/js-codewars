@@ -66,3 +66,17 @@ function excludingVatPrice(price) {
   return price === null ? -1 : +(price / 1.15).toFixed(2);
 }
 
+//https://www.codewars.com/kata/57f6ecdfcca6e045d2001207/train/javascript
+function add(a, b) {
+  return a == b;
+}
+
+//https://www.codewars.com/kata/53f1015fa9fe02cbda00111a/train/javascript
+class Ghost {
+  constructor() {
+    const rand = Math.floor(Math.random() * 4);
+    const colors = ['white', 'yellow', 'purple', 'red']
+    this.color = colors[rand];
+  }
+}
+
