@@ -43,4 +43,18 @@ function joinStrings(string1, string2) {
   return `${string1} ${string2}`
 }
 
+// https://www.codewars.com/kata/548ef5b7f33a646ea50000b2/train/javascript
+function charFreq(message) {
+  const dict = {};
+  message.split('').forEach(char => {
+    if (dict[char]) {
+      dict[char] = dict[char] + 1;
+    } else {
+      dict[char] = 1
+    }
+  });
+  return dict;
+}
+
+//
 
