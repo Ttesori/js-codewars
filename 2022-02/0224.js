@@ -24,3 +24,23 @@ function _if(bool, func1, func2) {
   return bool ? func1() : func2();
 }
 
+//https://www.codewars.com/kata/57216d4bcdd71175d6000560/train/javascript
+function padIt(str, n) {
+  let i = 1;
+  while (i <= n) {
+    if (i % 2 === 0) {
+      str += '*'
+    } else {
+      str = '*' + str;
+    }
+    i++;
+  }
+  return str;
+}
+
+//https://www.codewars.com/kata/582e4c3406e37fcc770001ad/train/javascript
+function joinStrings(string1, string2) {
+  return `${string1} ${string2}`
+}
+
+
