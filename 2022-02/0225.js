@@ -37,3 +37,34 @@ function billboard(name, price = 30) {
   return name.split('').reduce((sum, l) => sum + price, 0);
 }
 
+//https://www.codewars.com/kata/5a2e9ae2b6cfd7692a0000ba/train/javascript
+function typeOfSum(a, b) {
+  return typeof (a + b);
+}
+
+//https://www.codewars.com/kata/55a144eff5124e546400005a/train/javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  get info() {
+    return `${this.name}s age is ${this.age}`;
+  }
+}
+
+//https://www.codewars.com/kata/53d16bd82578b1fb5b00128c/train/javascript
+function grader(score) {
+  return score > 1 ? "F" : score >= .9 ? 'A' : score >= .8 ? "B" : score >= .7 ? "C" : score >= .6 ? "D" : "F";
+}
+
+//https://www.codewars.com/kata/54fdaa4a50f167b5c000005f/train/javascript
+function getStatus(isBusy) {
+  var msg = isBusy ? "busy" : "available";
+  return {
+    status: msg
+  }
+}
+
+
+
