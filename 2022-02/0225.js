@@ -18,3 +18,10 @@ function giveMeFive(obj) {
   }
   return arr;
 }
+
+//https://www.codewars.com/kata/57280481e8118511f7000ffa/solutions/javascript
+function splitAndMerge(str, separator) {
+  return str.split(' ').map(word => word.split('').join(separator)).join(' ');
+}
+
+
