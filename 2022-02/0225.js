@@ -27,3 +27,8 @@ function splitAndMerge(str, separator) {
 //https://www.codewars.com/kata/56f3f6a82010832b02000f38/train/javascript
 const describeAge = (age) => `You're a(n) ${age <= 12 ? 'kid' : age >= 13 && age <= 17 ? 'teenager' : age <= 64 ? 'adult' : 'elderly'}`;
 
+//https://www.codewars.com/kata/59126992f9f87fd31600009b/train/javascript
+function whoseMove(lastPlayer, win) {
+  return lastPlayer === 'white' ? (win ? 'white' : 'black') : (win ? 'black' : 'white');
+}
+
