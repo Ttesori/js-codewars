@@ -48,3 +48,14 @@ function toFreud(string) {
 
 //https://www.codewars.com/kata/511f0fe64ae8683297000001/train/javascript
 websites.push('codewars');
+
+//https://www.codewars.com/kata/5866fc43395d9138a7000006/train/javascript
+function ensureQuestion(s) {
+  return s[s.length - 1] === '?' ? s : s + '?';
+}
+
+//https://www.codewars.com/kata/578c1e2edaa01a9a02000b7f/train/javascript
+function aliasGen(fname, lname) {
+  const check = new RegExp(/^[A-Za-z]/)
+  return check.test(fname) && check.test(lname) ? `${firstName[fname[0].toUpperCase()]} ${surname[lname[0].toUpperCase()]}` : 'Your name must start with a letter from A - Z.';
+}
