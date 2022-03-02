@@ -9,3 +9,7 @@ function bigToSmall(arr) {
 function sc(floors) {
   return floors <= 1 ? "" : 'Aa~ '.repeat(floors - 1) + (floors <= 6 ? 'Pa! Aa!' : 'Pa!');
 }
+
+//https://www.codewars.com/kata/57238ceaef9008adc7000603/train/javascript
+const toHex = c => c.toString(16).length < 2 ? c.toString(16).padStart(2, '0') : c.toString(16);
+const colorOf = (r, g, b) => `#${toHex(r)}${toHex(g)}${toHex(b)}`;
