@@ -13,3 +13,14 @@ class Hero {
     this.experience = 0;
   }
 }
+
+//https://www.codewars.com/kata/54dba07f03e88a4cec000caf/train/javascript
+class Dog {
+  constructor(breed) {
+    this.breed = breed;
+  }
+
+  bark() {
+    return 'Woof'
+  }
+}
