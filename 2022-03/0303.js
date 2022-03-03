@@ -24,3 +24,16 @@ class Dog {
     return 'Woof'
   }
 }
+
+//https://www.codewars.com/kata/591588d49f4056e13f000001/train/javascript
+function HQ9(code) {
+  if (code === 'H') return 'Hello World!'
+  if (code === 'Q') return code;
+  if (code === '9') {
+    let lyrics = '';
+    for (let i = 99; i >= 0; i--) {
+      lyrics += `${i === 99 ? '' : '\n'}${i === 0 ? 'No more' : i} ${i === 1 ? 'bottle' : 'bottles'} of beer on the wall, ${i === 0 ? 'no more' : i} ${i === 1 ? 'bottle' : 'bottles'} of beer.\n${i === 0 ? 'Go to the store and buy some more' : 'Take one down and pass it around'}, ${i === 0 ? 99 : i - 1 > 0 ? i - 1 : 'no more'} ${i - 1 === 1 ? 'bottle' : 'bottles'} of beer on the wall.`
+    }
+    return lyrics;
+  }
+}
