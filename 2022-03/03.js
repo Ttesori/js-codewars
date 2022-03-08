@@ -15,3 +15,6 @@ function mystery() {
 function twoHighest(arr) {
   return [...new Set(arr)].sort((a, b) => b - a).slice(0, 2);
 }
+
+//https://www.codewars.com/kata/5703c093022cd1aae90012c9/train/javascript
+const find = (arr, el) => arr.indexOf(el) === -1 ? "Not found" : arr.indexOf(el);
