@@ -18,3 +18,6 @@ function twoHighest(arr) {
 
 //https://www.codewars.com/kata/5703c093022cd1aae90012c9/train/javascript
 const find = (arr, el) => arr.indexOf(el) === -1 ? "Not found" : arr.indexOf(el);
+
+//https://www.codewars.com/kata/559f860f8c0d6c7784000119/train/javascript
+const anyArrows = (arrows) => arrows.some(arrow => !arrow.hasOwnProperty('damaged') || !arrow.damaged);
