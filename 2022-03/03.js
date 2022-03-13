@@ -61,4 +61,9 @@ function main() {
 }
 
 //https://www.codewars.com/kata/559f3123e66a7204f000009f/train/javascript
-const ArrowFunc = (arr) => arr.map(num => String.fromCharCode(num)).join(''); 
+const ArrowFunc = (arr) => arr.map(num => String.fromCharCode(num)).join('');
+
+//https://www.codewars.com/kata/54598e89cbae2ac001001135/train/javascript
+function any(arr, fun) {
+  return arr.some(el => fun(el));
+}
