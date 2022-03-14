@@ -67,3 +67,8 @@ const ArrowFunc = (arr) => arr.map(num => String.fromCharCode(num)).join('');
 function any(arr, fun) {
   return arr.some(el => fun(el));
 }
+
+//https://www.codewars.com/kata/58e3f824a33b52c1dc0001c0/train/javascript
+function circleArea(circle) {
+  return Math.pow(circle.radius, 2) * Math.PI;
+}
