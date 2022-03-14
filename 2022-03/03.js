@@ -72,3 +72,18 @@ function any(arr, fun) {
 function circleArea(circle) {
   return Math.pow(circle.radius, 2) * Math.PI;
 }
+
+//https://www.codewars.com/kata/568018a64f35f0c613000054/train/javascript
+class Guesser {
+  constructor(number, lives) {
+    this.number = number;
+    this.lives = lives;
+  }
+
+  guess(n) {
+    if (this.lives === 0) throw 'No more lives';
+    if (n === this.number) return true;
+    this.lives--;
+    return false;
+  }
+}
