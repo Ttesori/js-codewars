@@ -87,3 +87,15 @@ class Guesser {
     return false;
   }
 }
+
+//https://www.codewars.com/kata/5732d3c9791aafb0e4001236/train/javascript
+function roundIt(n) {
+  let digits = String(n).split('.');
+  if (digits[0].length > digits[1].length) {
+    return Math.floor(n);
+  } else if (digits[1].length > digits[0].length) {
+    return Math.ceil(n);
+  } else {
+    return Math.round(n);
+  }
+}
