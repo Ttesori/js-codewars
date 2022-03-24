@@ -99,3 +99,14 @@ function roundIt(n) {
     return Math.round(n);
   }
 }
+
+//https://www.codewars.com/kata/563c13853b07a8f17c000022/train/javascript
+function isToday(date) {
+  const today = new Date();
+  return date.getMonth() === today.getMonth() && date.getDate() === today.getDate() && date.getFullYear() === today.getFullYear();
+}
+//https://www.codewars.com/kata/563c13853b07a8f17c000022/train/javascript
+function isToday(date) {
+  return newDate().toDateString() === date.toDateString();
+}
+
