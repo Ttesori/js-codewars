@@ -139,3 +139,14 @@ var rooms = {
 function none(arr, fun) {
   return arr.every(item => !fun(item));
 }
+
+//https://www.codewars.com/kata/56bcaedfcf6b7f2125001118/train/javascript
+const htmlspecialchars = formdata => {
+  const tags = {
+    '<': '&lt;',
+    '>': '&gt;',
+    '&': '&amp;',
+    '"': '&quot;'
+  };
+  return formdata.replace(/[<>&"]/g, (tag) => tags[tag] || tag);
+};
