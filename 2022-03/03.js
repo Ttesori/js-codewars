@@ -150,3 +150,6 @@ const htmlspecialchars = formdata => {
   };
   return formdata.replace(/[<>&"]/g, (tag) => tags[tag] || tag);
 };
+
+//https://www.codewars.com/kata/56f8fe6a2e6c0dc83b0008a7/train/javascript
+const sumSquares = arr => arr.reduce((count, num) => count += (num * num), 0);
