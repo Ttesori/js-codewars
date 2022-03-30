@@ -153,3 +153,7 @@ const htmlspecialchars = formdata => {
 
 //https://www.codewars.com/kata/56f8fe6a2e6c0dc83b0008a7/train/javascript
 const sumSquares = arr => arr.reduce((count, num) => count += (num * num), 0);
+
+//https://www.codewars.com/kata/527b3cd0492b6b15250060af/train/javascript
+items = [];
+items.push({ a: "b", c: "d" });
