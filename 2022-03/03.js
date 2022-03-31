@@ -157,3 +157,10 @@ const sumSquares = arr => arr.reduce((count, num) => count += (num * num), 0);
 //https://www.codewars.com/kata/527b3cd0492b6b15250060af/train/javascript
 items = [];
 items.push({ a: "b", c: "d" });
+
+//https://www.codewars.com/kata/5722fd3ab7162a3a4500031f/train/javascript
+function whatNumberIsIt(n) {
+  const nums = [Number.MAX_VALUE, Number.MIN_VALUE, -Infinity, Infinity];
+  const str = n === nums[0] ? 'Number.MAX_VALUE' : n === nums[1] ? 'Number.MIN_VALUE' : n === nums[2] ? 'Number.NEGATIVE_INFINITY' : n === nums[3] ? 'Number.POSITIVE_INFINITY' : isNaN(n) ? 'Number.NaN' : n;
+  return `Input number is ${str}`;
+}
