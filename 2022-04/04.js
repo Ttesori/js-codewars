@@ -40,3 +40,8 @@ function bloodAlcoholContent(drinks, weight, sex, time) {
   let r = sex === 'male' ? .73 : .66;
   return +((A * (5.14 / weight) * r) - (.015 * time)).toFixed(4);
 }
+
+//https://www.codewars.com/kata/55849d76acd73f6cc4000087/train/javascript
+function playerRankUp(points) {
+  return points >= 100 ? "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up." : false;
+}
