@@ -28,3 +28,8 @@ function NameMe(first, last) {
   this.lastName = last;
   return { name: this.firstName + ' ' + this.lastName, firstName: this.firstName, lastName: this.lastName };
 }
+
+//https://www.codewars.com/kata/566dc05f855b36a031000048/train/javascript
+function addExtra(listOfNumbers) {
+  return [...listOfNumbers, 1];
+}
