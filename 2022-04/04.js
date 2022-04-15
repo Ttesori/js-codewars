@@ -68,3 +68,6 @@ function sameCase(a, b) {
   }
   return -1;
 }
+
+//https://www.codewars.com/kata/514a3996d22ce03198000003/train/javascript
+Object.freeze(MrFreeze);
