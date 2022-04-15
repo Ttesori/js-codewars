@@ -45,3 +45,26 @@ function bloodAlcoholContent(drinks, weight, sex, time) {
 function playerRankUp(points) {
   return points >= 100 ? "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up." : false;
 }
+
+//https://www.codewars.com/kata/5dd462a573ee6d0014ce715b/train/javascript
+function sameCase(a, b) {
+  if (a.charCodeAt(0) >= 65 && a.charCodeAt(0) <= 90) {
+    // a is uppercase
+    if (b.charCodeAt(0) >= 65 && b.charCodeAt(0) <= 90) {
+      return 1;
+    }
+    if (b.charCodeAt(0) >= 97 && b.charCodeAt(0) <= 122) {
+      return 0;
+    }
+  }
+  if (a.charCodeAt(0) >= 97 && a.charCodeAt(0) <= 122) {
+    // a is lowercase
+    if (b.charCodeAt(0) >= 97 && b.charCodeAt(0) <= 122) {
+      return 1;
+    }
+    if (b.charCodeAt(0) >= 65 && b.charCodeAt(0) <= 90) {
+      return 0;
+    }
+  }
+  return -1;
+}
