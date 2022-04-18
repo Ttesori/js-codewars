@@ -86,3 +86,8 @@ function doTurn() {
   buyHealth();
   printStatus();
 }
+
+//https://www.codewars.com/kata/5733f948d780e27df6000e33/train/javascript
+function cutCube(volume, n) {
+  return Number.isInteger(Math.cbrt(volume)) && Number.isInteger(Math.cbrt(volume / n));
+}
