@@ -98,3 +98,18 @@ function blackAndWhite(arr) {
   if (arr.indexOf(5) >= 0 && arr.indexOf(13) >= 0) return "It's a black array";
   if (arr.indexOf(5) === -1 || arr.indexOf(13) === -1) return "It's a white array";
 }
+
+//https://www.codewars.com/kata/57096af70dad013aa200007b/train/javascript
+function logicalCalc(arr, op) {
+  let curr = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (op === "AND") {
+      curr = curr && arr[i];
+    } else if (op === "OR") {
+      curr = curr || arr[i];
+    } else if (op === "XOR") {
+      curr = curr ^ arr[i];
+    }
+  }
+  return Boolean(curr);
+}
