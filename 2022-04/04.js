@@ -118,3 +118,11 @@ function logicalCalc(arr, op) {
 function slope(points) {
   return points[2] - points[0] !== 0 ? `${(points[3] - points[1]) / (points[2] - points[0])}` : "undefined";
 }
+
+//https://www.codewars.com/kata/574c5075d27783851800169e/train/javascript
+function animals(heads, legs) {
+  const leg4 = (legs / 2) - heads;
+  const leg2 = heads - leg4;
+  if (!Number.isInteger(leg4) || leg4 < 0 || leg2 < 0) return "No solutions";
+  return [leg2, leg4];
+}
