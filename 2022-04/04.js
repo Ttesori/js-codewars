@@ -129,3 +129,11 @@ function animals(heads, legs) {
 
 //https://www.codewars.com/kata/56f4f7cfaf5b1f8cd100060e/train/javascript
 const squaresOnly = arr => arr.filter(num => Number.isInteger(Math.sqrt(num)));
+
+//https://www.codewars.com/kata/56ff9b53140fcca90b000530/train/javascript
+class Labrador extends Dog {
+  constructor(name, age, gender, master) {
+    super(name, age, gender, "Labrador", "Large", master, true);
+    this.legs = 4;
+  }
+}
