@@ -126,3 +126,6 @@ function animals(heads, legs) {
   if (!Number.isInteger(leg4) || leg4 < 0 || leg2 < 0) return "No solutions";
   return [leg2, leg4];
 }
+
+//https://www.codewars.com/kata/56f4f7cfaf5b1f8cd100060e/train/javascript
+const squaresOnly = arr => arr.filter(num => Number.isInteger(Math.sqrt(num)));
