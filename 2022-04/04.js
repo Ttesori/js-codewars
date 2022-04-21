@@ -157,3 +157,12 @@ function getMax2() {
     name: 'Max Headroom'
   };
 }
+
+//https://www.codewars.com/kata/56dd9b84fe5754786f0014f7/train/javascript
+Array.prototype.filter = function (func) {
+  let arr = [];
+  for (let i = 0; i < this.length; i++) {
+    if (func(this[i])) arr.push(this[i]);
+  }
+  return arr;
+};
