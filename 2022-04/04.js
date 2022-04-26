@@ -169,3 +169,8 @@ Array.prototype.filter = function (func) {
 
 //https://www.codewars.com/kata/59f9796cffe75f9299000025/train/javascript
 const a = '0';
+
+//https://www.codewars.com/kata/56606694ec01347ce800001b/solutions/javascript
+function isTriangle(a, b, c) {
+  return a + b > c && a + c > b && c + b > a;
+}
