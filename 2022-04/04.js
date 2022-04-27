@@ -179,3 +179,14 @@ function isTriangle(a, b, c) {
 function roundToNext5(n) {
   return Math.ceil(n / 5) * 5;
 }
+
+//https://www.codewars.com/kata/57f36495c0bb25ecf50000e7/train/javascript
+function findSum(n) {
+  let sum = 0;
+  let i = 0;
+  while (i <= n) {
+    if (i % 3 === 0 || i % 5 === 0) sum += i;
+    i++;
+  }
+  return sum;
+}
