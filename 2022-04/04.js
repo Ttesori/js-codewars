@@ -190,3 +190,17 @@ function findSum(n) {
   }
   return sum;
 }
+
+//https://www.codewars.com/kata/529eef7a9194e0cbc1000255/train/javascript
+var isAnagram = function (test, original) {
+  test = test.toLowerCase().split('');
+  original = original.toLowerCase().split('');
+  for (let i = 0; i < test.length; i++) {
+    if (original.indexOf(test[i]) !== -1) {
+      original.splice(original.indexOf(test[i]), 1);
+    } else {
+      return false;
+    }
+  }
+  return original.length === 0;
+};
