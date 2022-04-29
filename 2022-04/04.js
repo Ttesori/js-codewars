@@ -204,3 +204,8 @@ var isAnagram = function (test, original) {
   }
   return original.length === 0;
 };
+
+//https://www.codewars.com/kata/59c287b16bddd291c700009a/train/javascript
+function iceBrickVolume(radius, bottleLength, rimLength) {
+  return (radius * (bottleLength - rimLength) * (radius * 2));
+}
