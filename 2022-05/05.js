@@ -24,6 +24,5 @@ function smallEnough(a, limit) {
 
 //https://www.codewars.com/kata/5ac6932b2f317b96980000ca/train/javascript
 function minValue(values) {
-  let vals = [...new Set(values)].sort((a, b) => a - b);
-  return Number(vals.slice(0, vals.length).join(''));
+  return Number([...new Set(values)].sort((a, b) => a - b).join(''));
 }
