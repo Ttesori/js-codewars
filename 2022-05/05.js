@@ -11,3 +11,8 @@ function solution(nums) {
 
 //https://www.codewars.com/kata/52f3149496de55aded000410/train/javascript
 const sumDigits = (number) => Math.abs(number).toString().split('').reduce((sum, num) => sum + Number(num), 0);
+
+//https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/javascript
+function reverseLetter(str) {
+  return str.match(/[a-z]/g).reverse().join('');
+}
