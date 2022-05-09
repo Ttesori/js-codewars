@@ -26,3 +26,8 @@ function smallEnough(a, limit) {
 function minValue(values) {
   return Number([...new Set(values)].sort((a, b) => a - b).join(''));
 }
+
+//https://www.codewars.com/kata/51f2b4448cadf20ed0000386/train/javascript
+function removeUrlAnchor(url) {
+  return url.split('#')[0];
+}
