@@ -31,3 +31,16 @@ function minValue(values) {
 function removeUrlAnchor(url) {
   return url.split('#')[0];
 }
+
+
+//https://www.codewars.com/kata/5b180e9fedaa564a7000009a/train/javascript
+function solve(s) {
+  const count = s.split('').reduce((res, char) => char === char.toUpperCase() ? [res[0], res[1] + 1] : [res[0] + 1, res[1]], [0, 0]);
+  if (count[0] > count[1]) {
+    return s.toLowerCase();
+  } else if (count[0] < count[1]) {
+    return s.toUpperCase();
+  } else {
+    return s.toLowerCase();
+  }
+}
