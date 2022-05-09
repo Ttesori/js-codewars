@@ -44,3 +44,8 @@ function solve(s) {
     return s.toLowerCase();
   }
 }
+
+//https://www.codewars.com/kata/56b7f2f3f18876033f000307/train/javascript
+function inAscOrder(arr) {
+  return arr.toString() === arr.sort((a, b) => a - b).toString();
+}
