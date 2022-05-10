@@ -71,3 +71,6 @@ const quadratic = (x1, x2) => [1, -x1 + -x2, -x1 * -x2];
 function barTriang(p1, p2, p3) {
   return [+((p1[0] + p2[0] + p3[0]) / 3).toFixed(4), +((p1[1] + p2[1] + p3[1]) / 3).toFixed(4)];
 }
+
+//https://www.codewars.com/kata/5763bb0af716cad8fb000580/train/javascript
+const countSquares = cuts => (cuts ? 6 * cuts ** 2 + 2 : 1);
