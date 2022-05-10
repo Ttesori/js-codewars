@@ -74,3 +74,6 @@ function barTriang(p1, p2, p3) {
 
 //https://www.codewars.com/kata/5763bb0af716cad8fb000580/train/javascript
 const countSquares = cuts => (cuts ? 6 * cuts ** 2 + 2 : 1);
+
+//https://www.codewars.com/kata/57bfea4cb19505912900012c/train/javascript
+const symmetricPoint = ([x1, y1], [x2, y2]) => [x2 * 2 - x1, y2 * 2 - y1];
