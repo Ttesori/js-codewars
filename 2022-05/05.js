@@ -49,3 +49,17 @@ function solve(s) {
 function inAscOrder(arr) {
   return arr.toString() === arr.sort((a, b) => a - b).toString();
 }
+
+//https://www.codewars.com/kata/577a6e90d48e51c55e000217/train/javascript
+var hotpo = function (n) {
+  let count = 0;
+  while (n !== 1) {
+    count++;
+    if (n % 2 === 0) {
+      n = n / 2;
+    } else {
+      n = (3 * n) + 1;
+    }
+  }
+  return count;
+};
