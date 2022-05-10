@@ -77,3 +77,16 @@ const countSquares = cuts => (cuts ? 6 * cuts ** 2 + 2 : 1);
 
 //https://www.codewars.com/kata/57bfea4cb19505912900012c/train/javascript
 const symmetricPoint = ([x1, y1], [x2, y2]) => [x2 * 2 - x1, y2 * 2 - y1];
+
+//https://www.codewars.com/kata/56c5847f27be2c3db20009c3/solutions/javascript
+const list = ["#", "kiwi", "pear", "kiwi", "banana", "melon", "banana", "melon", "pineapple", "apple", "pineapple", "cucumber", "pineapple", "cucumber", "orange", "grape", "orange", "grape", "apple", "grape", "cherry", "pear", "cherry", "pear", "kiwi", "banana", "kiwi", "apple", "melon", "banana", "melon", "pineapple", "melon", "pineapple", "cucumber", "orange", "apple", "orange", "grape", "orange", "grape", "cherry", "pear", "cherry", "pear", "apple", "pear", "kiwi", "banana", "kiwi", "banana", "melon", "pineapple", "melon", "apple", "cucumber", "pineapple", "cucumber", "orange", "cucumber", "orange", "grape", "cherry", "apple", "cherry", "pear", "cherry", "pear", "kiwi", "pear", "kiwi", "banana", "apple", "banana", "melon", "pineapple", "melon", "pineapple", "cucumber", "pineapple", "cucumber", "apple", "grape", "orange", "grape", "cherry", "grape", "cherry", "pear", "cherry", "apple", "kiwi", "banana", "kiwi", "banana", "melon", "banana", "melon", "pineapple", "apple", "pineapple"];
+
+function SubtractSum(n) {
+  let sum = n.toString().split('').reduce((count, num) => Number(num) + count, 0);
+  n = n - sum;
+  while (n > 100) {
+    let sum = n.toString().split('').reduce((count, num) => Number(num) + count, 0);
+    n = n - sum;
+  }
+  return list[n];
+}
