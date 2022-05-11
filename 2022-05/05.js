@@ -105,3 +105,10 @@ function isValid(formula) {
 function circleCircumference(circle) {
   return (2 * Math.PI * circle.radius);
 }
+
+//https://www.codewars.com/kata/59fc72fe235f93838b002235/train/javascript
+function power(x, y) {
+  if (x === 1) return 1;
+  if (x === 0 && y === 0) return 1;
+  return x ** y;
+}
