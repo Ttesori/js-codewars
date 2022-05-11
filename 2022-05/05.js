@@ -129,3 +129,16 @@ function eachCons(array, n) {
   }
   return list;
 }
+
+//https://www.codewars.com/kata/55c0ac142326fdf18d0000af/train/javascript
+class Cube {
+  constructor(n = 0) {
+    this.side = Math.abs(n);
+  }
+  getSide() {
+    return this.side;
+  }
+  setSide(n) {
+    this.side = Math.abs(n);
+  }
+}
