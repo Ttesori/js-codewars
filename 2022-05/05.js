@@ -117,3 +117,15 @@ function power(x, y) {
 Math.roundTo = function (number, precision) {
   return +number.toFixed(precision);
 };
+
+//https://www.codewars.com/kata/545af3d185166a3dec001190/train/javascript
+function eachCons(array, n) {
+  let list = [];
+  if (n > array.length) return list;
+
+  for (let i = 0; i < array.length; i++) {
+    list.push(array.slice(i, i + n));
+    if (array[i + n] === undefined) break;
+  }
+  return list;
+}
