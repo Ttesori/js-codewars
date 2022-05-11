@@ -100,3 +100,8 @@ function isValid(formula) {
   if (!formula.includes(7) && !formula.includes(8)) return false;
   return true;
 }
+
+//https://www.codewars.com/kata/58e43389acfd3e81d5000a88/train/javascript
+function circleCircumference(circle) {
+  return (2 * Math.PI * circle.radius);
+}
