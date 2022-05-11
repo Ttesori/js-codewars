@@ -112,3 +112,8 @@ function power(x, y) {
   if (x === 0 && y === 0) return 1;
   return x ** y;
 }
+
+//https://www.codewars.com/kata/56be025f9347a066c7000e4f/train/javascript
+Math.roundTo = function (number, precision) {
+  return +number.toFixed(precision);
+};
