@@ -145,3 +145,14 @@ class Cube {
 
 //https://www.codewars.com/kata/5612a42e746aa62de100001a/train/javascript
 const dBScale = intensity => 10 * Math.log10(intensity / 10 ** -12);
+
+//https://www.codewars.com/kata/5ab52526379d20736b00000e/train/javascript
+function magNumber(info) {
+  const weapons = {
+    "PT92": 17,
+    "M4A1": 30,
+    "M16A2": 30,
+    "PSG1": 5
+  };
+  return Math.ceil((info[1] * 3) / (weapons[info[0]]));
+}
