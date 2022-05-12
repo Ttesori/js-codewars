@@ -229,3 +229,14 @@ function validate(username, password) {
   if (password.includes('//') || password.includes('||')) password = false;
   return database.login(username, password);
 }
+
+//https://www.codewars.com/kata/57238766214e4b04b8000011/train/javascript
+function changeMe(moneyIn) {
+  const accepted = ['£5', '£2', '£1', '50p', '20p'];
+  if (!accepted.includes(moneyIn)) return moneyIn;
+  if (moneyIn === '£5') return `${'20p '.repeat(5 * 5).trimRight()}`;
+  if (moneyIn === '£2') return `${'20p '.repeat(5 * 2).trimRight()}`;
+  if (moneyIn === '£1') return `${'20p '.repeat(5 * 1).trimRight()}`;
+  if (moneyIn === '50p') return `${'20p '.repeat(2).trimRight()} 10p`;
+  if (moneyIn === '20p') return `${'10p '.repeat(2).trimRight()}`;
+}
