@@ -248,3 +248,11 @@ Number.prototype.times = function (f) {
     f(i);
   }
 };
+
+//https://www.codewars.com/kata/5786f8404c4709148f0006bf/train/javascript
+function startingMark(bodyHeight) {
+  const a = { x: 1.52, y: 9.45 };
+  const b = { x: 1.83, y: 10.67 };
+  const m = (b.y - a.y) / (b.x - a.x);
+  return Math.round((m * bodyHeight + b.y - m * b.x) * 100) / 100;
+}
