@@ -256,3 +256,8 @@ function startingMark(bodyHeight) {
   const m = (b.y - a.y) / (b.x - a.x);
   return Math.round((m * bodyHeight + b.y - m * b.x) * 100) / 100;
 }
+
+//https://www.codewars.com/kata/575fa9afee048b293e000287/train/javascript
+function howMuchWater(water, load, clothes) {
+  return clothes > (load * 2) ? 'Too much clothes' : clothes < load ? 'Not enough clothes' : +(water * 1.1 ** (clothes - load)).toFixed(2);
+}
