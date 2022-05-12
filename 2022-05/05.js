@@ -232,11 +232,12 @@ function validate(username, password) {
 
 //https://www.codewars.com/kata/57238766214e4b04b8000011/train/javascript
 function changeMe(moneyIn) {
-  const accepted = ['£5', '£2', '£1', '50p', '20p'];
-  if (!accepted.includes(moneyIn)) return moneyIn;
-  if (moneyIn === '£5') return `${'20p '.repeat(5 * 5).trimRight()}`;
-  if (moneyIn === '£2') return `${'20p '.repeat(5 * 2).trimRight()}`;
-  if (moneyIn === '£1') return `${'20p '.repeat(5 * 1).trimRight()}`;
-  if (moneyIn === '50p') return `${'20p '.repeat(2).trimRight()} 10p`;
-  if (moneyIn === '20p') return `${'10p '.repeat(2).trimRight()}`;
+  switch (moneyIn) {
+    case '£5': return '20p '.repeat(25).trim();
+    case '£2': return '20p '.repeat(10).trim();
+    case '£1': return '20p '.repeat(5).trim();
+    case '50p': return '20p 20p 10p';
+    case '20p': return '10p 10p';
+    default: return moneyIn;
+  }
 }
