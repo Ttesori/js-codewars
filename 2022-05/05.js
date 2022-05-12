@@ -277,3 +277,9 @@ const solution = (molarMass1, molarMass2, givenMass1, givenMass2, volume, temp) 
   const T = temp + 273.15;
   return (((givenMass1 / molarMass1) + (givenMass2 / molarMass2)) * R * T) / volume;
 };
+
+//https://www.codewars.com/kata/5692a582cc22387ccf000017/train/javascript
+const configuration = {
+  "name": "your-pack-name",
+  "version": "1.0.0"
+};
