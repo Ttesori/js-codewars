@@ -156,3 +156,15 @@ function magNumber(info) {
   };
   return Math.ceil((info[1] * 3) / (weapons[info[0]]));
 }
+
+//https://www.codewars.com/kata/514aa0dc21607ae236000017/train/javascript
+var greet_abe = function () {
+  var name = 'Abe';
+  return "Hello, " + name + '!';
+};
+
+var greet_ben = function () {
+  var name = 'Ben';
+  return "Hello, " + name + '!';
+};
+
