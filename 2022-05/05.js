@@ -261,3 +261,13 @@ function startingMark(bodyHeight) {
 function howMuchWater(water, load, clothes) {
   return clothes > (load * 2) ? 'Too much clothes' : clothes < load ? 'Not enough clothes' : +(water * 1.1 ** (clothes - load)).toFixed(2);
 }
+
+//https://www.codewars.com/kata/57078c56924f34f763000b3f/solutions/javascript
+class Circular {
+  constructor() {
+    this.value = "Hello World";
+    this.self = this;
+  }
+}
+
+circular = new Circular();
