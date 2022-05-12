@@ -269,5 +269,11 @@ class Circular {
     this.self = this;
   }
 }
-
 circular = new Circular();
+
+//https://www.codewars.com/kata/5b7ea71db90cc0f17c000a5a/train/javascript
+const solution = (molarMass1, molarMass2, givenMass1, givenMass2, volume, temp) => {
+  const R = 0.082;
+  const T = temp + 273.15;
+  return (((givenMass1 / molarMass1) + (givenMass2 / molarMass2)) * R * T) / volume;
+};
