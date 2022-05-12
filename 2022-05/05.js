@@ -220,5 +220,12 @@ function solution([m1, m2, d], [um1, um2, ud]) {
 }
 
 //https://www.codewars.com/kata/57080f21d531cd94950007eb/train/javascript
-// blackBox.toString();
+// console.log(blackBox.toString());
 JSopenSesame();
+
+//https://www.codewars.com/kata/55e4c52ad58df7509c00007e/train/javascript
+function validate(username, password) {
+  var database = new Database();
+  if (password.includes('//') || password.includes('||')) password = false;
+  return database.login(username, password);
+}
