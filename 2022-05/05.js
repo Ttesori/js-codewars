@@ -176,3 +176,15 @@ function amIWilson(p) {
 function factorial(n) {
   return n === 1 ? 1 : n * factorial(n - 1);
 }
+
+//https://www.codewars.com/kata/57642a90dee2da8dd3000161/train/javascript
+function arr2bin(arr) {
+  const sum = arr.reduce((sum, num) => !isNaN(parseInt(num)) ? sum + num : sum, 0);
+  return sum.toString(2);
+}
+
+//https://www.codewars.com/kata/57642a90dee2da8dd3000161/train/javascript
+function arr2bin(arr) {
+  const sum = arr.reduce((sum, num) => typeof num === 'number' ? sum + num : sum, 0);
+  return sum.toString(2);
+}
