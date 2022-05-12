@@ -168,3 +168,11 @@ var greet_ben = function () {
   return "Hello, " + name + '!';
 };
 
+//https://www.codewars.com/kata/55dc4520094bbaf50e0000cb/train/javascript
+function amIWilson(p) {
+  return Number.isInteger((factorial(p - 1) + 1) / (p * p));
+}
+
+function factorial(n) {
+  return n === 1 ? 1 : n * factorial(n - 1);
+}
