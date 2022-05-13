@@ -286,3 +286,9 @@ const configuration = {
 
 //https://www.codewars.com/kata/572269697297444c570008b9/train/javascript
 const greaterThanLessThan = (a, b, c) => a < b < c;
+
+//https://www.codewars.com/kata/59cfc000aeb2844d16000075/train/javascript
+function capitalize(s) {
+  return [s.split('').map((char, i) => i % 2 === 1 ? char.toLowerCase() : char.toUpperCase()).join(''), s.split('').map((char, i) => i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('')];
+};
+
