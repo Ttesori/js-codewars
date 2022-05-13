@@ -292,3 +292,7 @@ function capitalize(s) {
   return [s.split('').map((char, i) => i % 2 === 1 ? char.toLowerCase() : char.toUpperCase()).join(''), s.split('').map((char, i) => i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('')];
 };
 
+//https://www.codewars.com/kata/5b39e3772ae7545f650000fc/train/javascript
+function removeDuplicateWords(s) {
+  return Array.from(new Set(s.split(' '))).join(' ');
+}
