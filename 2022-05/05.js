@@ -306,3 +306,18 @@ function mxdiflg(a1, a2) {
   const two = Math.abs(a1[a1.length - 1].length - a2[a2.length - 1].length);
   return one > two ? one : two;
 }
+
+//https://www.codewars.com/kata/577bd8d4ae2807c64b00045b/javascript
+function declareWinner(fighter1, fighter2, firstAttacker) {
+  let attacker = fighter1.name === firstAttacker ? fighter1 : fighter2;
+  let defender = attacker.name === fighter1.name ? fighter2 : fighter1;
+  while (fighter1.health > 0 && fighter2.health > 0) {
+    defender.health = defender.health - attacker.damagePerAttack;
+    let dead = defender.health <= 0 ? `and is dead. ${attacker.name} wins.` : '';
+    console.log(`${attacker.name} attacks ${defender.name}; ${defender.name} now has ${defender.health}${dead}.`);
+    if (dead) return attacker.name;
+    let temp = attacker;
+    attacker = defender;
+    defender = temp;
+  }
+}
