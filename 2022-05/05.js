@@ -326,3 +326,14 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
 function maxMultiple(divisor, bound) {
   return (Math.floor(bound / divisor) * divisor);
 }
+
+//https://www.codewars.com/kata/51675d17e0c1bed195000001/train/javascript
+function solution(digits) {
+  let arr = digits.split('');
+  let max = 0;
+  for (let i = 0; i < arr.length - 4; i++) {
+    let num = Number(digits.slice(i, i + 5));
+    max = num > max ? num : max;
+  }
+  return max;
+}
