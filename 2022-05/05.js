@@ -342,3 +342,8 @@ function solution(digits) {
 function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
   return enteredCode === correctCode && new Date(currentDate).getTime() <= new Date(expirationDate).getTime();
 }
+
+//https://www.codewars.com/kata/5d5ee4c35162d9001af7d699/train/javascript
+function sumOfMinimums(arr) {
+  return arr.reduce((sum, nums) => sum + Math.min(...nums), 0);
+}
