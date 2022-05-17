@@ -347,3 +347,8 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
 function sumOfMinimums(arr) {
   return arr.reduce((sum, nums) => sum + Math.min(...nums), 0);
 }
+
+//https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9/train/javascript
+function rowWeights(array) {
+  return [array.filter((p, i) => i % 2 === 0).reduce((sum, w) => sum + w, 0), array.filter((p, i) => i % 2 !== 0).reduce((sum, w) => sum + w, 0)];
+}
