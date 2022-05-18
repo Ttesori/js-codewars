@@ -352,3 +352,8 @@ function sumOfMinimums(arr) {
 function rowWeights(array) {
   return [array.filter((p, i) => i % 2 === 0).reduce((sum, w) => sum + w, 0), array.filter((p, i) => i % 2 !== 0).reduce((sum, w) => sum + w, 0)];
 }
+
+//https://www.codewars.com/kata/57a049e253ba33ac5e000212/train/javascript
+function factorial(n) {
+  return n <= 1 ? 1 : n * factorial(n - 1);
+}
