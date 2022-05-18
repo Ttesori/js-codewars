@@ -357,3 +357,8 @@ function rowWeights(array) {
 function factorial(n) {
   return n <= 1 ? 1 : n * factorial(n - 1);
 }
+
+//https://www.codewars.com/kata/57ee99a16c8df7b02d00045f/train/javascript
+function flattenAndSort(array) {
+  return array.reduce((newArr, el) => [...newArr, ...el], []).sort((a, b) => a - b);
+}
