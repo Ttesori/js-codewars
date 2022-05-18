@@ -362,3 +362,14 @@ function factorial(n) {
 function flattenAndSort(array) {
   return array.reduce((newArr, el) => [...newArr, ...el], []).sort((a, b) => a - b);
 }
+
+//https://www.codewars.com/kata/5506b230a11c0aeab3000c1f/solutions/javascript
+function evaporator(content, evap_per_day, threshold) {
+  const limit = content * (threshold / 100);
+  let day = 0;
+  while (content > limit) {
+    content -= (content * (evap_per_day / 100));
+    day++;
+  }
+  return day;
+}
