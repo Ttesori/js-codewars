@@ -383,3 +383,14 @@ function angle(n) {
 function repeater(string, n) {
   return string.repeat(n);
 }
+
+//https://www.codewars.com/kata/580a4734d6df748060000045/train/javascript
+function isSortedAndHow(array) {
+  if (array.toString() === [...array].sort((a, b) => a - b).toString()) {
+    return 'yes, ascending';
+  }
+  if (array.toString() === [...array].sort((a, b) => b - a).toString()) {
+    return 'yes, descending';
+  }
+  return 'no';
+}
