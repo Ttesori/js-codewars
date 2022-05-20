@@ -394,3 +394,20 @@ function isSortedAndHow(array) {
   }
   return 'no';
 }
+
+//https://www.codewars.com/kata/59377c53e66267c8f6000027/train/javascript
+function alphabetWar(fight) {
+  const chars = {
+    w: 4,
+    p: 3,
+    b: 2,
+    s: 1,
+    m: 4,
+    q: 3,
+    d: 2,
+    z: 1
+  };
+  const left = fight.split('').reduce((sum, char) => ['w', 'p', 'b', 's'].includes(char) ? sum = sum + chars[char] : sum, 0);
+  const right = fight.split('').reduce((sum, char) => ['m', 'q', 'd', 'z'].includes(char) ? sum = sum + chars[char] : sum, 0);
+  return left > right ? 'Left side wins!' : right > left ? 'Right side wins!' : "Let's fight again!";
+}
