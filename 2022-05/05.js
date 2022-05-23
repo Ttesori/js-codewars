@@ -411,3 +411,9 @@ function alphabetWar(fight) {
   const right = fight.split('').reduce((sum, char) => ['m', 'q', 'd', 'z'].includes(char) ? sum = sum + chars[char] : sum, 0);
   return left > right ? 'Left side wins!' : right > left ? 'Right side wins!' : "Let's fight again!";
 }
+
+//https://www.codewars.com/kata/59706036f6e5d1e22d000016/train/javascript
+function wordsToMarks(string) {
+  const chars = '/abcdefghijklmnopqrstuvwxyz';
+  return string.split('').reduce((sum, char) => sum + chars.indexOf(char), 0);
+}
