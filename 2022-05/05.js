@@ -422,3 +422,8 @@ function wordsToMarks(string) {
 function triangular(n) {
   return n > 0 ? (n * (n + 1)) / 2 : 0;
 }
+
+//https://www.codewars.com/kata/514a6336889283a3d2000001/train/javascript
+function getEvenNumbers(numbersArray) {
+  return numbersArray.filter(n => n % 2 === 0);
+}
