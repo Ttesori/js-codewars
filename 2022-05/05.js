@@ -432,3 +432,8 @@ function getEvenNumbers(numbersArray) {
 function reverseNumber(n) {
   return n > 0 ? Number(n.toString().split('').reverse().join('')) : -Number(Math.abs(n).toString().split('').reverse().join(''));
 }
+
+//https://www.codewars.com/kata/5aff237c578a14752d0035ae/train/javascript
+function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
+  return Math.floor(Math.sqrt((age1 ** 2 + age2 ** 2 + age3 ** 2 + age4 ** 2 + age5 ** 2 + age6 ** 2 + age7 ** 2 + age8 ** 2)) / 2);
+}
