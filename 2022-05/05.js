@@ -442,3 +442,8 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
 function findLongest(array) {
   return array.sort((a, b) => b.toString().length - a.toString().length)[0];
 }
+
+//https://www.codewars.com/kata/580878d5d27b84b64c000b51/train/javascript
+function sumTriangularNumbers(n) {
+  return n > 1 ? sumTriangularNumbers(n - 1) + (n * (n + 1)) / 2 : n === 1 ? 1 : 0;
+}
