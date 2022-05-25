@@ -447,3 +447,9 @@ function findLongest(array) {
 function sumTriangularNumbers(n) {
   return n > 1 ? sumTriangularNumbers(n - 1) + (n * (n + 1)) / 2 : n === 1 ? 1 : 0;
 }
+
+//https://www.codewars.com/kata/556196a6091a7e7f58000018/train/javascript
+function largestPairSum(numbers) {
+  numbers.sort((a, b) => b - a);
+  return numbers[0] + numbers[1];
+}
