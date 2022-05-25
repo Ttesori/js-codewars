@@ -453,3 +453,13 @@ function largestPairSum(numbers) {
   numbers.sort((a, b) => b - a);
   return numbers[0] + numbers[1];
 }
+
+//https://www.codewars.com/kata/5a4138acf28b82aa43000117/train/javascript
+function adjacentElementsProduct(array) {
+  let max = -Infinity;
+  for (let i = 0; i < array.length - 1; i++) {
+    let prod = array[i] * array[i + 1];
+    if (prod > max) max = prod;
+  }
+  return max;
+}
