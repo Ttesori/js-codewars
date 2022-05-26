@@ -463,3 +463,13 @@ function adjacentElementsProduct(array) {
   }
   return max;
 }
+
+//https://www.codewars.com/kata/525f039017c7cd0e1a000a26/train/javascript
+const palindromeChainLength = n => {
+  let steps = 0;
+  while (n.toString() !== n.toString().split('').reverse().join('')) {
+    n += Number(n.toString().split('').reverse().join(''));
+    steps++;
+  }
+  return steps;
+};
