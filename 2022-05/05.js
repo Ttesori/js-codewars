@@ -482,3 +482,8 @@ function vowelIndices(word) {
   });
   return arr;
 }
+
+//https://www.codewars.com/kata/57ed30dde7728215300005fa/train/javascript
+function bump(x) {
+  return x.split('').filter(char => char === 'n').length <= 15 ? 'Woohoo!' : 'Car Dead';
+}
