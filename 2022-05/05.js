@@ -473,3 +473,12 @@ const palindromeChainLength = n => {
   }
   return steps;
 };
+
+//https://www.codewars.com/kata/5680781b6b7c2be860000036/train/javascript
+function vowelIndices(word) {
+  let arr = [];
+  word.toLowerCase().split('').forEach((char, i) => {
+    if (['a', 'e', 'i', 'o', 'u', 'y'].includes(char)) arr.push(i + 1);
+  });
+  return arr;
+}
