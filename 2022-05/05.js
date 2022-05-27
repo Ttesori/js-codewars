@@ -487,3 +487,18 @@ function vowelIndices(word) {
 function bump(x) {
   return x.split('').filter(char => char === 'n').length <= 15 ? 'Woohoo!' : 'Car Dead';
 }
+
+//https://www.codewars.com/kata/56e9e4f516bcaa8d4f001763/train/javascript
+class SequenceSum {
+  static showSequence(n) {
+    if (n < 0) return `${n}<0`;
+    if (n === 0) return `0=0`;
+    let output = '0+';
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+      sum += i;
+      i === n ? output += `${i}` : output += `${i}+`;
+    }
+    return `${output} = ${sum}`;
+  }
+}
