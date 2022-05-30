@@ -524,3 +524,14 @@ function fizzbuzz(n) {
 function noOdds(values) {
   return values.filter(num => num % 2 === 0);
 }
+
+// https://www.codewars.com/kata/5a58d46cfd56cb4e8600009d/train/javascript
+function halvingSum(n) {
+  let sum = n;
+  let div = 2;
+  while (div <= n) {
+    sum += Math.floor(n / div);
+    div *= 2;
+  }
+  return sum;
+}
