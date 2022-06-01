@@ -540,3 +540,9 @@ function halvingSum(n) {
 function evenNumbers(array, number) {
   return array.filter(n => n % 2 === 0).slice(-number);
 }
+
+//https://www.codewars.com/kata/59d9ff9f7905dfeed50000b0/train/javascript
+function solve(arr) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  return arr.map(word => word.split('').reduce((sum, char, i) => alphabet[i] === char.toLowerCase() ? sum + 1 : sum, 0));
+};
