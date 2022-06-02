@@ -26,3 +26,12 @@ const findDigit = function (num, nth) {
   if (nth > strNum.length) return 0;
   return Number(strNum[strNum.length - nth]);
 };
+
+//
+function addLetters(...letters) {
+  if (!letters || letters.length === 0) return 'z';
+  const chars = 'zabcdefghijklmnopqrstuvwxyz'.split('');
+  let val = [...letters].reduce((sum, char, i) => sum + chars.indexOf(char), 0);
+  if (val > 26) val %= 26;
+  return chars[val];
+}
