@@ -27,11 +27,16 @@ const findDigit = function (num, nth) {
   return Number(strNum[strNum.length - nth]);
 };
 
-//
+//https://www.codewars.com/kata/5d50e3914861a500121e1958
 function addLetters(...letters) {
   if (!letters || letters.length === 0) return 'z';
   const chars = 'zabcdefghijklmnopqrstuvwxyz'.split('');
   let val = [...letters].reduce((sum, char, i) => sum + chars.indexOf(char), 0);
   if (val > 26) val %= 26;
   return chars[val];
+}
+
+//https://www.codewars.com/kata/59a8570b570190d313000037/train/javascript
+function sumCubes(n) {
+  return n === 1 ? 1 : (n ** 3) + sumCubes(n - 1);
 }
