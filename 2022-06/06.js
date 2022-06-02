@@ -18,3 +18,11 @@ function isPowerOfTwo(n) {
 
 //https://www.codewars.com/kata/535474308bb336c9980006f2/train/javascript
 const greet = name => `Hello ${name[0].toUpperCase()}${name.toLowerCase().slice(1)}!`;
+
+//https://www.codewars.com/kata/577b9960df78c19bca00007e/train/javascript
+const findDigit = function (num, nth) {
+  if (nth <= 0) return -1;
+  const strNum = Math.abs(num).toString();
+  if (nth > strNum.length) return 0;
+  return Number(strNum[strNum.length - nth]);
+};
