@@ -57,3 +57,15 @@ function horMirror(strng) {
 function oper(fct, s) {
   return fct(s);
 }
+
+//https://www.codewars.com/kata/56f3a1e899b386da78000732/train/javascript
+function partlist(arr) {
+  let output = [];
+  for (let i = 1; i < arr.length; i++) {
+    let arr1 = [];
+    arr1.push(arr.slice(0, i).join(' '));
+    arr1.push(arr.slice(i).join(' '));
+    output.push(arr1);
+  }
+  return output;
+}
