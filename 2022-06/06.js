@@ -46,3 +46,14 @@ function overTheRoad(address, n) {
   const total = n * 2;
   return total - address + 1;
 }
+
+//https://www.codewars.com/kata/56dbe0e313c2f63be4000b25/train/javascript
+function vertMirror(strng) {
+  return strng.split('\n').map(line => line.split('').reverse().join('')).join('\n');
+}
+function horMirror(strng) {
+  return strng.split('\n').reverse().join('\n');
+}
+function oper(fct, s) {
+  return fct(s);
+}
