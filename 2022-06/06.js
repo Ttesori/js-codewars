@@ -40,3 +40,9 @@ function addLetters(...letters) {
 function sumCubes(n) {
   return n === 1 ? 1 : (n ** 3) + sumCubes(n - 1);
 }
+
+//https://www.codewars.com/kata/5f0ed36164f2bc00283aed07/train/javascript
+function overTheRoad(address, n) {
+  const total = n * 2;
+  return total - address + 1;
+}
