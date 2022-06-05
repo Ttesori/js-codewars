@@ -74,3 +74,8 @@ function partlist(arr) {
 function averages(numbers) {
   return !numbers || numbers.length < 2 ? [] : numbers.map((num, i) => (num + numbers[i + 1]) / 2).slice(0, numbers.length - 1);
 }
+
+//https://www.codewars.com/kata/553e8b195b853c6db4000048/train/javascript
+function hasUniqueChars(str) {
+  return str === [...new Set(str.split(''))].join('').toString();
+}
