@@ -89,3 +89,9 @@ function sortGiftCode(code) {
 function digits(n) {
   return n.toString().length;
 }
+
+//https://www.codewars.com/kata/580dda86c40fa6c45f00028a/train/javascript
+function cubeOdd(arr) {
+  if (arr.some(num => isNaN(Number(num)))) return undefined;
+  return arr.map(num => Math.pow(num, 3)).filter(num => Math.abs(num) % 2 === 1).reduce((sum, num) => sum + num, 0);
+}
