@@ -98,5 +98,5 @@ function cubeOdd(arr) {
 
 //https://www.codewars.com/kata/58acfe4ae0201e1708000075/train/javascript
 function inviteMoreWomen(L) {
-  return L.reduce((sum, num) => sum + num, 0) <= 0 ? false : true;
+  return L.reduce((sum, num) => sum + num, 0) > 0;
 }
