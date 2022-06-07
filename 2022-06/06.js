@@ -95,3 +95,8 @@ function cubeOdd(arr) {
   if (arr.some(num => isNaN(Number(num)))) return undefined;
   return arr.map(num => Math.pow(num, 3)).filter(num => Math.abs(num) % 2 === 1).reduce((sum, num) => sum + num, 0);
 }
+
+//https://www.codewars.com/kata/58acfe4ae0201e1708000075/train/javascript
+function inviteMoreWomen(L) {
+  return L.reduce((sum, num) => sum + num, 0) <= 0 ? false : true;
+}
