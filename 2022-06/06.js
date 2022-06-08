@@ -111,3 +111,8 @@ function countRedBeads(n) {
 function automorphic(n) {
   return (n ** 2).toString().slice(-n.toString().length) === n.toString() ? "Automorphic" : "Not!!";
 }
+
+//https://www.codewars.com/kata/526c7363236867513f0005ca/train/javascript
+function isLeapYear(year) {
+  return year % 400 === 0 ? true : year % 100 === 0 ? false : year % 4 === 0 ? true : false;
+}
