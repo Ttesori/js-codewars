@@ -116,3 +116,8 @@ function automorphic(n) {
 function isLeapYear(year) {
   return year % 400 === 0 ? true : year % 100 === 0 ? false : year % 4 === 0 ? true : false;
 }
+
+//https://www.codewars.com/kata/5ba38ba180824a86850000f7/train/javascript
+function solve(arr) {
+  return arr.filter((num, i) => i === arr.lastIndexOf(num));
+}
