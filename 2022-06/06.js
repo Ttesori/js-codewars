@@ -106,3 +106,8 @@ function countRedBeads(n) {
   if (n < 2) return 0;
   return (n - 1) * 2;
 }
+
+//https://www.codewars.com/kata/5a58d889880385c2f40000aa/train/javascript
+function automorphic(n) {
+  return (n ** 2).toString().slice(-n.toString().length) === n.toString() ? "Automorphic" : "Not!!";
+}
