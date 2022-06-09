@@ -121,3 +121,13 @@ function isLeapYear(year) {
 function solve(arr) {
   return arr.filter((num, i) => i === arr.lastIndexOf(num));
 }
+
+//https://www.codewars.com/kata/54df2067ecaa226eca000229/train/javascript
+function f(n) {
+  if (!Number.isInteger(n) || n <= 0) return false;
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+};
