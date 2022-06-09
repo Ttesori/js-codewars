@@ -138,3 +138,9 @@ function count(array) {
   array.forEach(name => count[name] ? count[name] += 1 : count[name] = 1);
   return count;
 }
+
+//https://www.codewars.com/kata/5af15a37de4c7f223e00012d/train/javascript
+function menFromBoys(arr) {
+  arr = [...new Set(arr)];
+  return [...arr.filter(num => num % 2 === 0).sort((a, b) => a - b), ...arr.filter(num => Math.abs(num) % 2 === 1).sort((a, b) => b - a)];
+}
