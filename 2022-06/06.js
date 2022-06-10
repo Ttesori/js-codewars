@@ -144,3 +144,8 @@ function menFromBoys(arr) {
   arr = [...new Set(arr)];
   return [...arr.filter(num => num % 2 === 0).sort((a, b) => a - b), ...arr.filter(num => Math.abs(num) % 2 === 1).sort((a, b) => b - a)];
 }
+
+//https://www.codewars.com/kata/56484848ba95170a8000004d/train/javascript
+function gps(s, x) {
+  return x.length > 1 ? Math.max(...x.map((num, i) => Math.floor((3600 * (x[i + 1] - num) / s))).slice(0, x.length - 1)) : 0;
+}
