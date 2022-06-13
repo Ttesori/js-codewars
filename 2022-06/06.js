@@ -149,3 +149,8 @@ function menFromBoys(arr) {
 function gps(s, x) {
   return x.length > 1 ? Math.max(...x.map((num, i) => Math.floor((3600 * (x[i + 1] - num) / s))).slice(0, x.length - 1)) : 0;
 }
+
+//https://www.codewars.com/kata/59a96d71dbe3b06c0200009c/train/javascript
+function generateShape(integer) {
+  return `${'+'.repeat(integer)}\n`.repeat(integer - 1) + '+'.repeat(integer);
+}
