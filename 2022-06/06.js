@@ -154,3 +154,8 @@ function gps(s, x) {
 function generateShape(integer) {
   return `${'+'.repeat(integer)}\n`.repeat(integer - 1) + '+'.repeat(integer);
 }
+
+//https://www.codewars.com/kata/5783d8f3202c0e486c001d23/train/javascript
+function toNumberArray(strArr) {
+  return strArr.map(str => Number(str));
+}
