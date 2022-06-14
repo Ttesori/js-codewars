@@ -176,3 +176,15 @@ const orderedCount = function (text) {
   }
   return map;
 };
+
+//https://www.codewars.com/kata/58f0ba42e89aa6158400000e/train/javascript
+function foldTo(distance) {
+  if (distance < 0) return null;
+  let folds = 0;
+  let thickness = .0001;
+  while (thickness < distance) {
+    thickness *= 2;
+    folds++;
+  }
+  return folds;
+}
