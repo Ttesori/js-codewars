@@ -159,3 +159,20 @@ function generateShape(integer) {
 function toNumberArray(strArr) {
   return strArr.map(str => Number(str));
 }
+
+//https://www.codewars.com/kata/57a6633153ba33189e000074/train/javascript
+const orderedCount = function (text) {
+  const map = [];
+  for (let i = 0; i < text.length; i++) {
+    // If this isn't first instance of char, continue
+    if (text.indexOf(text[i]) !== i) continue;
+    let count = [text[i], 0];
+    for (let j = i; j < text.length; j++) {
+      if (text[i] === text[j]) {
+        count[1]++;
+      }
+    }
+    map.push(count);
+  }
+  return map;
+};
