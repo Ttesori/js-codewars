@@ -188,3 +188,26 @@ function foldTo(distance) {
   }
   return folds;
 }
+
+//https://www.codewars.com/kata/5a25ac6ac5e284cfbe000111/train/javascript
+function triangle(row) {
+  const map = {
+    RR: 'R',
+    RG: 'B',
+    RB: 'G',
+    GR: 'B',
+    GG: 'G',
+    GB: 'R',
+    BR: 'G',
+    BG: 'R',
+    BB: 'B'
+  };
+  while (row.length > 1) {
+    let newRow = '';
+    for (let i = 0; i < row.length - 1; i++) {
+      newRow += map[row[i] + row[i + 1]];
+    }
+    row = newRow;
+  }
+  return row;
+}
