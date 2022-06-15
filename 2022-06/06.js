@@ -216,3 +216,21 @@ function triangle(row) {
 function cookingTime(eggs) {
   return Math.ceil(eggs / 8) * 5;
 }
+
+//https://www.codewars.com/kata/5a4e3782880385ba68000018/train/javascript
+function balancedNum(number) {
+  let numStr = number.toString().split('');
+  if (numStr.length <= 2) return 'Balanced';
+
+  let index = numStr.length % 2 === 0 ? [(numStr.length / 2) - 1, numStr.length / 2] : [Math.floor(numStr.length / 2)];
+  let left = 0;
+  let right = 0;
+
+  for (let i = 0; i < numStr.length; i++) {
+    if (index.includes(i)) continue;
+    if (i < index[0]) left += Number(numStr[i]);
+    if (i > index[index.length - 1]) right += Number(numStr[i]);
+  }
+
+  return left === right ? 'Balanced' : 'Not Balanced';
+}
