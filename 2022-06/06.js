@@ -239,3 +239,16 @@ function balancedNum(number) {
 function maxDiff(list) {
   return list.length > 1 ? Math.max(...list) - Math.min(...list) : 0;
 };
+
+//https://www.codewars.com/kata/58941fec8afa3618c9000184/train/javascript
+function growingPlant(upSpeed, downSpeed, desiredHeight) {
+  let day = 0;
+  let height = 0;
+  let night = false;
+  while (height < desiredHeight) {
+    day += .5;
+    night ? height -= downSpeed : height += upSpeed;
+    night = !night;
+  }
+  return Math.ceil(day);
+}
