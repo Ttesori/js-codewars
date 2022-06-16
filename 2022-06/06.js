@@ -261,3 +261,8 @@ function myLanguages(results) {
   }
   return list.sort((a, b) => b[1] - a[1]).map(el => el[0]);
 }
+
+//https://www.codewars.com/kata/57f759bb664021a30300007d/train/javascript
+function switcheroo(x) {
+  return x.split('').map(char => char === 'a' ? 'b' : char === 'b' ? 'a' : 'c').join('');
+}
