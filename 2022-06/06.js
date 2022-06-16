@@ -252,3 +252,12 @@ function growingPlant(upSpeed, downSpeed, desiredHeight) {
   }
   return Math.ceil(day);
 }
+
+//https://www.codewars.com/kata/5b16490986b6d336c900007d/train/javascript
+function myLanguages(results) {
+  let list = [];
+  for (let lang in results) {
+    if (results[lang] >= 60) list.push([lang, results[lang]]);
+  }
+  return list.sort((a, b) => b[1] - a[1]).map(el => el[0]);
+}
