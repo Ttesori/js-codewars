@@ -266,3 +266,8 @@ function myLanguages(results) {
 function switcheroo(x) {
   return x.split('').map(char => char === 'a' ? 'b' : char === 'b' ? 'a' : 'c').join('');
 }
+
+//https://www.codewars.com/kata/586beb5ba44cfc44ed0006c3/train/javascript
+function sumEvenNumbers(input) {
+  return input.reduce((sum, num) => num % 2 === 0 ? sum + num : sum, 0);
+}
