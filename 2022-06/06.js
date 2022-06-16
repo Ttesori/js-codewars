@@ -271,3 +271,29 @@ function switcheroo(x) {
 function sumEvenNumbers(input) {
   return input.reduce((sum, num) => num % 2 === 0 ? sum + num : sum, 0);
 }
+
+//https://www.codewars.com/kata/525d50d2037b7acd6e000534/train/javascript
+Array.prototype.square = function () {
+  return this.map(el => el ** 2);
+};
+
+Array.prototype.cube = function () {
+  return this.map(el => el ** 3);
+};
+
+Array.prototype.average = function () {
+  return this.length > 0 ? this.sum() / this.length : NaN;
+};
+
+Array.prototype.sum = function () {
+  return this.reduce((sum, el) => sum + el, 0);
+};
+
+Array.prototype.even = function () {
+  return this.filter(el => el % 2 === 0);
+};
+
+Array.prototype.odd = function () {
+  return this.filter(el => el % 2 === 1);
+};
+
