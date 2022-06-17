@@ -313,9 +313,7 @@ const uniqueInOrder = iterable => {
 };
 
 //https://www.codewars.com/kata/5287e858c6b5a9678200083c/train/javascript
-function narcissistic(value) {
-  const strNum = value.toString();
-  return strNum.length > 1 ? strNum.split('').map(num => Number(num) ** strNum.length).reduce((sum, num) => sum + num, 0) === value : true;
-}
+const narcissistic = val => val.toString().length > 1 ? val.toString().split('').reduce((sum, num) => sum + (Number(num) ** val.toString().length), 0) === val : true;
+
 
 
