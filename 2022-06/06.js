@@ -337,3 +337,6 @@ function solution(str) {
   }
   return arr;
 }
+
+//https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/javascript
+const wave = str => str.split('').map((char, i) => char !== ' ' ? str.slice(0, i) + char.toUpperCase() + str.slice(i + 1) : null).filter(item => item !== null);
