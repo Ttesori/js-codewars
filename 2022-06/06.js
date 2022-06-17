@@ -297,3 +297,12 @@ Array.prototype.odd = function () {
   return this.filter(el => el % 2 === 1);
 };
 
+//https://www.codewars.com/kata/556deca17c58da83c00002db/train/javascript
+function tribonacci(signature, n) {
+  if (n < 3) return signature.slice(0, n);
+  for (let i = signature.length - 1; signature.length < n; i++) {
+    signature.push(signature[i] + signature[i - 1] + signature[i - 2]);
+  }
+  return signature;
+}
+
