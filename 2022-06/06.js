@@ -340,3 +340,26 @@ function solution(str) {
 
 //https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/javascript
 const wave = str => str.split('').map((char, i) => char !== ' ' ? str.slice(0, i) + char.toUpperCase() + str.slice(i + 1) : null).filter(item => item !== null);
+
+//https://www.codewars.com/kata/56a5d994ac971f1ac500003e/train/javascript
+function longestConsec(arr, k) {
+  if (arr.length <= 0 || k === 0 || k > arr.length) return "";
+
+  let longestIdx = 0;
+  let longestSum = 0;
+  let longestStr = '';
+  for (let i = 0; i < arr.length - k + 1; i++) {
+    let sum = 0;
+    for (let j = 0; j < k; j++) {
+      sum += arr[i + j].length;
+    }
+    if (sum > longestSum) {
+      longestSum = sum;
+      longestIdx = i;
+    }
+  }
+  for (let i = 0; i < k; i++) {
+    longestStr += arr[longestIdx + i];
+  }
+  return longestStr;
+}
