@@ -325,3 +325,15 @@ function findMissingLetter(arr) {
   }
 }
 
+//https://www.codewars.com/kata/515de9ae9dcfc28eb6000001/train/javascript
+function solution(str) {
+  let arr = [];
+  for (let i = 0; i < str.length; i += 2) {
+    if (str[i + 1]) {
+      arr.push(str[i] + str[i + 1]);
+    } else {
+      arr.push(str[i] + '_');
+    }
+  }
+  return arr;
+}
