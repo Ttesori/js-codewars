@@ -306,3 +306,9 @@ function tribonacci(signature, n) {
   return signature;
 }
 
+//https://www.codewars.com/kata/54e6533c92449cc251001667/train/javascript
+const uniqueInOrder = iterable => {
+  if (typeof iterable === 'string') iterable = iterable.split('');
+  return iterable.filter((char, i) => char !== iterable[i + 1]);
+};
+
