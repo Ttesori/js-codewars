@@ -315,5 +315,13 @@ const uniqueInOrder = iterable => {
 //https://www.codewars.com/kata/5287e858c6b5a9678200083c/train/javascript
 const narcissistic = val => val.toString().length > 1 ? val.toString().split('').reduce((sum, num) => sum + (Number(num) ** val.toString().length), 0) === val : true;
 
-
+//https://www.codewars.com/kata/5839edaa6754d6fec10000a2/train/javascript
+function findMissingLetter(arr) {
+  const alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  for (let i = 0; i < arr.length - 1; i++) {
+    const cur = alpha.indexOf(arr[i]);
+    const next = alpha.indexOf(arr[i + 1]);
+    if (next !== cur + 1) return alpha[cur + 1];
+  }
+}
 
