@@ -312,3 +312,10 @@ const uniqueInOrder = iterable => {
   return iterable.filter((char, i) => char !== iterable[i + 1]);
 };
 
+//https://www.codewars.com/kata/5287e858c6b5a9678200083c/train/javascript
+function narcissistic(value) {
+  const strNum = value.toString();
+  return strNum.length > 1 ? strNum.split('').map(num => Number(num) ** strNum.length).reduce((sum, num) => sum + num, 0) === value : true;
+}
+
+
