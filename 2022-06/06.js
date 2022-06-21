@@ -379,3 +379,18 @@ const countSmileys = arr => {
   const match = arr.join(' ').match(/[:;]{1}[-~]?[)D]{1}/g);
   return match ? match.length : 0;
 };
+
+//https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/javascript
+function expandedForm(num) {
+  const strNum = num.toString();
+  let place = 1;
+  let expanded = '';
+  for (let i = strNum.length - 1; i >= 0; i--) {
+    if (Number(strNum[i]) > 0) {
+      const toAdd = expanded.length === 0 ? `${place * Number(strNum[i])}` : `${place * Number(strNum[i])} + `;
+      expanded = toAdd + expanded;
+    }
+    place *= 10;
+  }
+  return expanded;
+}
