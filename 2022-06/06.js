@@ -394,3 +394,8 @@ function expandedForm(num) {
   }
   return expanded;
 }
+
+//https://www.codewars.com/kata/57a62154cf1fa5b25200031e/train/javascript
+function alternateCase(s) {
+  return s.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
+}
