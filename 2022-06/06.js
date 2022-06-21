@@ -372,3 +372,10 @@ function isPrime(num) {
   }
   return true;
 }
+
+//https://www.codewars.com/kata/583203e6eb35d7980400002a/train/javascript
+const countSmileys = arr => {
+  if (!arr.length) return 0;
+  const match = arr.join(' ').match(/[:;]{1}[-~]?[)D]{1}/g);
+  return match ? match.length : 0;
+};
