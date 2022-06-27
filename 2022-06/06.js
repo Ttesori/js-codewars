@@ -399,3 +399,15 @@ function expandedForm(num) {
 function alternateCase(s) {
   return s.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
 }
+
+//https://www.codewars.com/kata/597c684822bc9388f600010f/train/javascript
+class Dinglemouse {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  getFullName() {
+    return `${this.firstName}${this.firstName && this.lastName ? ' ' : ''}${this.lastName}`;
+  }
+}
