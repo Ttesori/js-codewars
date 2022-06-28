@@ -124,3 +124,16 @@ function strong(n) {
 function fact(num) {
   return num <= 1 ? 1 : num * fact(num - 1);
 }
+
+//https://www.codewars.com/kata/5552101f47fc5178b1000050/train/javascript
+function digPow(n, p) {
+  let total = n.toString()
+    .split('')
+    .map((num, i) => Number(num) ** (p + i))
+    .reduce((sum, num) => sum + num);
+  if (total % n === 0) {
+    return total / n;
+  } else {
+    return -1;
+  }
+}
