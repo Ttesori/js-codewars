@@ -8,3 +8,11 @@ function add(n) {
     return n + num;
   };
 }
+
+https://www.codewars.com/kata/57f75cc397d62fc93d000059/train/javascript
+function calc(x) {
+  let total1 = '';
+  x.toString().split('').forEach((char, i) => total1 += x.charCodeAt(i));
+  let total2 = total1.match(/7/g);
+  return total2?.length ? total2.length * 6 : 0;
+}
