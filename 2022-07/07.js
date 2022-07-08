@@ -25,3 +25,10 @@ function pairs(ar) {
   }
   return count;
 };
+
+//https://www.codewars.com/kata/586909e4c66d18dd1800009b/train/javascript
+function multiplyAll(arr) {
+  return function (num) {
+    return arr.map(el => el * num);
+  };
+}
