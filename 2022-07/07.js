@@ -37,3 +37,11 @@ function multiplyAll(arr) {
 function spacify(str) {
   return str.split('').join(' ');
 }
+
+//https://www.codewars.com/kata/5500d54c2ebe0a8e8a0003fd/train/javascript
+function mygcd(x, y) {
+  let lg = x > y ? y : x;
+  for (let i = lg; i >= 1; i--) {
+    if (x % i === 0 && y % i === 0) return i;
+  }
+}
