@@ -45,3 +45,11 @@ function mygcd(x, y) {
     if (x % i === 0 && y % i === 0) return i;
   }
 }
+
+//https://www.codewars.com/kata/587731fda577b3d1b0001196/train/javascript
+String.prototype.camelCase = function () {
+  let output = '';
+  let input = this.trim().split(' ');
+  if (input.length > 1) input.forEach(word => output += word[0].toUpperCase() + word.slice(1).toLowerCase());
+  return output;
+};
