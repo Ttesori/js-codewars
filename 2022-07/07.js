@@ -53,3 +53,12 @@ String.prototype.camelCase = function () {
   if (input.length > 1) input.forEach(word => output += word[0].toUpperCase() + word.slice(1).toLowerCase());
   return output;
 };
+
+//https://www.codewars.com/kata/52761ee4cffbc69732000738/train/javascript
+function goodVsEvil(good, evil) {
+  good = good.split(' ');
+  evil = evil.split(' ');
+  let goodVal = (good[0] * 1) + (good[1] * 2) + (good[2] * 3) + (good[3] * 3) + (good[4] * 4) + (good[5] * 10);
+  let evilVal = (evil[0] * 1) + (evil[1] * 2) + (evil[2] * 2) + (evil[3] * 2) + (evil[4] * 3) + (evil[5] * 5) + (evil[6] * 10);
+  return goodVal > evilVal ? 'Battle Result: Good triumphs over Evil' : goodVal === evilVal ? 'Battle Result: No victor on this battle field' : 'Battle Result: Evil eradicates all trace of Good';
+}
