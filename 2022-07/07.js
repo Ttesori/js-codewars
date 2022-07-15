@@ -62,3 +62,11 @@ function goodVsEvil(good, evil) {
   let evilVal = (evil[0] * 1) + (evil[1] * 2) + (evil[2] * 2) + (evil[3] * 2) + (evil[4] * 3) + (evil[5] * 5) + (evil[6] * 10);
   return goodVal > evilVal ? 'Battle Result: Good triumphs over Evil' : goodVal === evilVal ? 'Battle Result: No victor on this battle field' : 'Battle Result: Evil eradicates all trace of Good';
 }
+
+//https://www.codewars.com/kata/59df2f8f08c6cec835000012/train/javascript
+function meeting(s) {
+  let people = s.split(';');
+  let peopleNames = people.map(person => `(${person.toUpperCase().split(':').reverse().join(', ')})`);
+  peopleNames.sort();
+  return peopleNames.join('');
+}
