@@ -70,3 +70,16 @@ function meeting(s) {
   peopleNames.sort();
   return peopleNames.join('');
 }
+
+//https://www.codewars.com/kata/569d488d61b812a0f7000015/train/javascript
+function dataReverse(data) {
+  let output = [];
+  for (let i = 0; i < data.length; i += 8) {
+    let seq = data.slice(i, i + 8);
+    output.push(seq);
+  }
+  output.reverse();
+  let smush = [];
+  output.forEach(el => smush = [...smush, ...el]);
+  return smush;
+}
