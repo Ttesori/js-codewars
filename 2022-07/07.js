@@ -83,3 +83,11 @@ function dataReverse(data) {
   output.forEach(el => smush = [...smush, ...el]);
   return smush;
 }
+
+//https://www.codewars.com/kata/57eaec5608fed543d6000021/train/javascript
+function divCon(x) {
+  let totalInt = 0;
+  let totalStr = 0;
+  x.forEach(num => typeof num === 'string' ? totalStr += Number(num) : totalInt += num);
+  return totalInt - totalStr;
+}
