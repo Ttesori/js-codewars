@@ -91,3 +91,15 @@ function divCon(x) {
   x.forEach(num => typeof num === 'string' ? totalStr += Number(num) : totalInt += num);
   return totalInt - totalStr;
 }
+
+//https://www.codewars.com/kata/558f9f51e85b46e9fa000025/train/javascript
+function differenceOfSquares(n) {
+  let sqSum = 0;
+  let sumSq = 0;
+  for (let i = 1; i <= n; i++) {
+    sqSum += i;
+    sumSq += i ** 2;
+  }
+  sqSum = sqSum ** 2;
+  return sqSum - sumSq;
+}
