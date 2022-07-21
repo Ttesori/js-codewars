@@ -103,3 +103,13 @@ function differenceOfSquares(n) {
   sqSum = sqSum ** 2;
   return sqSum - sumSq;
 }
+
+//https://www.codewars.com/kata/5a523566b3bfa84c2e00010b/train/javascript
+function minSum(arr) {
+  arr.sort((a, b) => a - b);
+  let newArr = [];
+  while (arr.length > 0) {
+    newArr.push(arr.pop() * arr.shift());
+  }
+  return newArr.reduce((sum, num) => sum + num);
+}
