@@ -113,3 +113,14 @@ function minSum(arr) {
   }
   return newArr.reduce((sum, num) => sum + num);
 }
+
+//https://www.codewars.com/kata/5a4d303f880385399b000001/train/javascript
+function strong(n) {
+  let nStr = n.toString();
+  let num = nStr.split('').map(num => fact(Number(num))).reduce((sum, num) => num + sum);
+  return n === num ? "STRONG!!!!" : "Not Strong !!";
+}
+
+function fact(num) {
+  return num === 1 ? 1 : num * fact(num - 1);
+}
