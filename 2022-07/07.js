@@ -122,5 +122,5 @@ function strong(n) {
 }
 
 function fact(num) {
-  return num === 1 ? 1 : num * fact(num - 1);
+  return num <= 1 ? 1 : num * fact(num - 1);
 }
