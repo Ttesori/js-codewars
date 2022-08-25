@@ -7,3 +7,8 @@ function removeRotten(bagOfFruits) {
 function nthSmallest(arr, pos) {
   return arr.sort((a, b) => a - b)[pos - 1];
 }
+
+//https://www.codewars.com/kata/5a651865fd56cb55760000e0/train/javascript
+function arrayLeaders(numbers) {
+  return numbers.filter((num, i) => num > numbers.slice(i + 1).reduce((sum, n) => sum + n, 0));
+}
