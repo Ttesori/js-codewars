@@ -21,3 +21,8 @@ function outed(meet, boss) {
   let avg = total / people;
   return avg <= 5 ? 'Get Out Now!' : 'Nice Work Champ!';
 }
+
+//https://www.codewars.com/kata/5a87449ab1710171300000fd/train/javascript
+function tidyNumber(n) {
+  return n === Number(n.toString().split('').sort((a, b) => Number(a) - Number(b)).join(''));
+}
