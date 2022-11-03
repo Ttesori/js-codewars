@@ -8,3 +8,8 @@ function yearDays(year) {
 function firstToLast(str, c) {
   return str.indexOf(c) !== -1 ? str.lastIndexOf(c) - str.indexOf(c) : -1;
 }
+
+//https://www.codewars.com/kata/56c24c58e0c0f741d4001aef/train/javascript
+const isReallyNaN = (val) => {
+  return Number.isNaN(val);
+};
