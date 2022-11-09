@@ -18,3 +18,6 @@ const isReallyNaN = (val) => {
 function ensureQuestion(s) {
   return s[s.length - 1] === '?' ? s : s + '?';
 }
+
+//https://www.codewars.com/kata/511f0fe64ae8683297000001/train/javascript
+websites.push('codewars');
