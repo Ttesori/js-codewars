@@ -26,3 +26,10 @@ websites.push('codewars');
 function toFreud(string) {
   return string.length > 0 ? string.split(' ').map(word => 'sex').join(' ') : '';
 }
+
+//https://www.codewars.com/kata/55a14aa4817efe41c20000bc/train/javascript
+class Cat extends Animal {
+  speak() {
+    return `${this.name} meows.`;
+  }
+}
