@@ -77,3 +77,8 @@ function getStatus(isBusy) {
     status: msg
   }
 }
+
+//https://www.codewars.com/kata/53d16bd82578b1fb5b00128c/train/javascript
+function grader(score) {
+  return score > 1 ? "F" : score >= .9 ? 'A' : score >= .8 ? "B" : score >= .7 ? "C" : score >= .6 ? "D" : "F";
+}
