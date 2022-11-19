@@ -98,3 +98,8 @@ class Person {
 function typeOfSum(a, b) {
   return typeof (a + b);
 }
+
+//https://www.codewars.com/kata/570e8ec4127ad143660001fd/train/javascript
+function billboard(name, price = 30) {
+  return name.split('').reduce((sum, l) => sum + price, 0);
+}
