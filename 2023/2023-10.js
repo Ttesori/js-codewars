@@ -71,9 +71,48 @@ function getCoins(cents) {
 }
 
 // Tests
-getCoins(4); //4
-getCoins(24); //6
-getCoins(25); //1
-getCoins(26); //2
-getCoins(99); //9
-getCoins(1); //1
+// getCoins(4); //4
+// getCoins(24); //6
+// getCoins(25); //1
+// getCoins(26); //2
+// getCoins(99); //9
+// getCoins(1); //1
+
+//https://cs50.harvard.edu/x/2023/psets/1/credit/
+
+function validCredit(number) {
+  let numberStr = number.toString();
+  // Multiply every other digit by 2, starting with the number’s second-to-last digit, and then add those products’ digits together.
+  let numberArr = numberStr.split('');
+  let prodTotal = 0;
+  for (let i = numberArr.length - 2; i >= 0; i -= 2) {
+    let prod = parseInt(numberArr[i]) * 2;
+    if (prod >= 10) {
+      let proArr = prod.toString().split('');
+      prodTotal += parseInt(proArr[0]) + parseInt(proArr[1]);
+    } else {
+      prodTotal += prod;
+    }
+    //console.log(prodTotal);
+  }
+  for (let i = numberArr.length - 1; i >= 0; i -= 2) {
+    prodTotal += parseInt(numberArr[i]);
+  }
+  //console.log(prodTotal);
+
+  // Add the sum to the sum of the digits that weren’t multiplied by 2.
+  // If the total’s last digit is 0 (or, put more formally, if the total modulo 10 is congruent to 0), the number is valid!
+  let result = (prodTotal % 10 === 0);
+  if (!result) return 'INVALID';
+  if (numberStr[0] === '3') return 'AMEX';
+  if (numberStr[0] === '2' || numberStr[0] === '5') return 'MASTERCARD';
+  if (numberStr[0] === '4' || numberStr[0] === '5') return 'VISA';
+}
+
+//Tests
+console.log(validCredit(4003600000000014)); //VISA
+console.log(validCredit(5555555555554444)); //MCARD
+console.log(validCredit(4012888888881881)); //VISA
+console.log(validCredit(2223016768739313)); //MCARD
+console.log(validCredit(371449635398431)); //AMEX
+console.log(validCredit(371449635398432)); //INVALID
