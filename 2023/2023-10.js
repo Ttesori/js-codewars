@@ -43,5 +43,37 @@ function marioMore(height) {
   }
 }
 // tests
-marioMore(8);
-marioMore(4);
+// marioMore(8);
+// marioMore(4);
+
+// https://cs50.harvard.edu/x/2023/psets/1/cash/
+function getCoins(cents) {
+  if (cents > 99 || cents < 0) return 'Cents must be between 1 and 99';
+  let coins = 0;
+  // Get quarters
+  if (cents >= 25) {
+    coins = Math.floor(cents / 25);
+    cents = cents % 25;
+  }
+  // get dimes
+  if (cents >= 10) {
+    coins += Math.floor(cents / 10);
+    cents = cents % 10;
+  }
+  // get nickels
+  if (cents >= 5) {
+    coins += Math.floor(cents / 5);
+    cents = cents % 5;
+  }
+  // rest is pennies
+  coins += cents;
+  console.log(coins);
+}
+
+// Tests
+getCoins(4); //4
+getCoins(24); //6
+getCoins(25); //1
+getCoins(26); //2
+getCoins(99); //9
+getCoins(1); //1
