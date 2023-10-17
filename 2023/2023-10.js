@@ -110,9 +110,72 @@ function validCredit(number) {
 }
 
 //Tests
-console.log(validCredit(4003600000000014)); //VISA
-console.log(validCredit(5555555555554444)); //MCARD
-console.log(validCredit(4012888888881881)); //VISA
-console.log(validCredit(2223016768739313)); //MCARD
-console.log(validCredit(371449635398431)); //AMEX
-console.log(validCredit(371449635398432)); //INVALID
+// console.log(validCredit(4003600000000014)); //VISA
+// console.log(validCredit(5555555555554444)); //MCARD
+// console.log(validCredit(4012888888881881)); //VISA
+// console.log(validCredit(2223016768739313)); //MCARD
+// console.log(validCredit(371449635398431)); //AMEX
+// console.log(validCredit(371449635398432)); //INVALID
+
+//https://www.codewars.com/kata/580755730b5a77650500010c/train/javascript
+function sortMyString(S) {
+  let result = [[], []];
+  for (let i = 0; i < S.length; i++) {
+    if (i % 2 === 0 || i === 0) {
+      result[0].push(S[i]);
+    } else {
+      result[1].push(S[i]);
+    }
+  }
+  return `${result[0].join('')} ${result[1].join('')}`;
+}
+
+// tests
+// sortMyString("CodeWars"); //CdWr oeas
+// sortMyString("YCOLUE'VREER"); //YOU'RE CLEVER
+
+// https://cs50.harvard.edu/x/2023/labs/2/
+let SCORES = {
+  A: 1,
+  B: 3,
+  C: 3,
+  D: 2,
+  E: 1,
+  F: 4,
+  G: 2,
+  H: 4,
+  I: 1,
+  J: 8,
+  K: 5,
+  L: 1,
+  M: 3,
+  N: 1,
+  O: 1,
+  P: 3,
+  Q: 10,
+  R: 1,
+  S: 1,
+  T: 1,
+  U: 1,
+  V: 4,
+  W: 4,
+  X: 8,
+  Y: 4,
+  Z: 10,
+};
+function compute_score(str) {
+  str = str.match(/[\w]/g);
+  return str.reduce((sum, letter) => sum + SCORES[letter.toUpperCase()], 0);
+}
+
+function scrabble(p1, p2) {
+  let p1Score = compute_score(p1);
+  let p2Score = compute_score(p2);
+  return p1Score > p2Score ? 'Player 1 wins!' : p2Score > p1Score ? 'Player 2 Wins!' : 'Tie!';
+};
+// Tests
+console.log(scrabble('Question?', 'Question!')); //Tie!
+console.log(scrabble('Oh,', 'hai!')); //Player 2 wins!
+console.log(scrabble('COMPUTER', 'science')); //Player 1 wins!
+console.log(scrabble('Scrabble', 'wiNNeR')); //Player 1 wins!
+
