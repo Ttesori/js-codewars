@@ -174,8 +174,40 @@ function scrabble(p1, p2) {
   return p1Score > p2Score ? 'Player 1 wins!' : p2Score > p1Score ? 'Player 2 Wins!' : 'Tie!';
 };
 // Tests
-console.log(scrabble('Question?', 'Question!')); //Tie!
-console.log(scrabble('Oh,', 'hai!')); //Player 2 wins!
-console.log(scrabble('COMPUTER', 'science')); //Player 1 wins!
-console.log(scrabble('Scrabble', 'wiNNeR')); //Player 1 wins!
+// console.log(scrabble('Question?', 'Question!')); //Tie!
+// console.log(scrabble('Oh,', 'hai!')); //Player 2 wins!
+// console.log(scrabble('COMPUTER', 'science')); //Player 1 wins!
+// console.log(scrabble('Scrabble', 'wiNNeR')); //Player 1 wins!
 
+function count_letters(str) {
+  return str.match(/[a-zA-Z]/g).length;
+}
+
+function count_words(str) {
+  return str.split(' ').length;
+}
+
+function count_sentences(str) {
+  return str.match(/[.?!]/g).length;
+}
+
+function readability(str) {
+  let words = count_words(str);
+  let avgLetters = (count_letters(str) / words) * 100;
+  let avgSentences = (count_sentences(str) / words) * 100;
+  let index = Math.round(.0588 * avgLetters - .296 * avgSentences - 15.8);
+  if (index < 1) {
+    return 'Before Grade 1';
+  }
+  if (index >= 16) {
+    return 'Grade 16+';
+  }
+  return `Grade ${index}`;
+}
+
+// Tests
+console.log(readability('One fish. Two fish. Red fish. Blue fish.')); // Before grade 1
+console.log(readability('Would you like them here or there? I would not like them here or there. I would not like them anywhere.')); // 2
+console.log(readability("Congratulations! Today is your day. You're off to Great Places! You're off and away!")); // 3
+console.log(readability('Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.')); // 5
+console.log(readability('A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.')); // 16+
